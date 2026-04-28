@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Clientes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Sistema de Clientes</h1>
+
+  <div class="container">
+
+    <!-- Formulário para adicionar / editar cliente -->
+    <div class="card">
+      <h2 id="titulo-form">Novo Cliente</h2>
+
+      <div class="form-grid">
+        <label>
+          Nome
+          <input id="campo-nome" type="text" placeholder="Ex: João Silva" />
+        </label>
+        <label>
+          Email
+          <input id="campo-email" type="email" placeholder="Ex: joao@email.com" />
+        </label>
+        <label>
+          Idade
+          <input id="campo-idade" type="number" placeholder="Ex: 25" min="0" />
+        </label>
+      </div>
+
+      <div class="form-acoes">
+        <button class="btn-salvar" onclick="salvar()">Salvar</button>
+        <button class="btn-cancelar" id="btn-cancelar" style="display:none" onclick="cancelarEdicao()">Cancelar</button>
+      </div>
+    </div>
+
+    <!-- Tabela de clientes -->
+    <div class="card">
+      <h2>Clientes Cadastrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Idade</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-corpo">
+          <!-- Linhas geradas pelo JavaScript -->
+        </tbody>
+      </table>
+      <div id="mensagem-vazio" class="vazio" style="display:none">
+        Nenhum cliente cadastrado ainda.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Notificação rápida -->
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

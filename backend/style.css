@@ -1,0 +1,170 @@
+/* ── Configurações gerais ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  padding: 32px 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 1.8rem;
+  color: #1a1a2e;
+}
+
+/* ── Container principal ── */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ── Card (caixinha branca) ── */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  color: #444;
+  border-bottom: 2px solid #f0f2f5;
+  padding-bottom: 10px;
+}
+
+/* ── Formulário ── */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  gap: 12px;
+  align-items: end;
+}
+
+.form-acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
+}
+
+input {
+  padding: 9px 12px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f8ef7;
+}
+
+/* ── Botões ── */
+button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover { opacity: 0.85; }
+
+.btn-salvar {
+  background: #4f8ef7;
+  color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+.btn-cancelar {
+  background: #e0e0e0;
+  color: #444;
+  width: 100%;
+  padding: 10px;
+}
+
+.btn-editar {
+  background: #ffe066;
+  color: #333;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+}
+
+.btn-excluir {
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+}
+
+/* ── Tabela ── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th {
+  text-align: left;
+  padding: 10px 12px;
+  background: #f7f8fa;
+  color: #666;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+td {
+  padding: 11px 12px;
+  border-top: 1px solid #f0f2f5;
+}
+
+tr:hover td { background: #fafbff; }
+
+.acoes { display: flex; gap: 6px; }
+
+/* ── Mensagem de vazio ── */
+.vazio {
+  text-align: center;
+  padding: 28px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* ── Toast (notificação rápida) ── */
+#toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+#toast.visivel { opacity: 1; }
